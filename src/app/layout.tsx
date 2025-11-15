@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <body className={ tiktokSans.className }>
+      <body className={tiktokSans.className}>
         <Header />
         <main className="w-full max-w-md">
           {children}
