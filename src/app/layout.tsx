@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { TikTok_Sans } from "next/font/google"
 import "./globals.css";
 
+import { Header } from "./components/Header";
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
        <body className={ tiktokSans.className }>
-        {children}
+        <Header />
+        <main className="w-full max-w-md">
+          {children}
+        </main>
       </body>
     </html>
   );
