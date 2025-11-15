@@ -4,8 +4,8 @@ export function Header() {
 
     return (
         <header>
-            <div className="flex flex-row justify-between bg-black h-[50px]">
-                <div className="p-2.5">
+            <div className="flex flex-row justify-between bg-black h-[50px] items-center">
+                <div className="pl-4">
                     <Image
                         src={"/images/header/logo.png"}
                         alt="PCP Pal Logo"
@@ -14,7 +14,7 @@ export function Header() {
                         className="h-[30px] w-[116px]"
                     />
                 </div>
-                <div className="flex flex-row items-center p-2.5 gap-4">
+                <div className="flex flex-row items-center pr-4 gap-4">
                     <Image
                         src={"/images/header/trustpilot.png"}
                         alt="Rated 4.8 out of 5 on Trustpilot"
@@ -31,7 +31,7 @@ export function Header() {
                     />
                 </div>
             </div>
-            <div className="h-8.5 bg-white flex items-center mx-2.5 gap-2.5 border-b border-b-[#00000026]">
+            <div className="h-8.5 bg-white flex items-center mx-4 gap-2.5 border-b border-b-[#00000026]">
                 <Image
                     src={"/images/header/user-icon.png"}
                     alt="1,000,000+ drivers helped so far"
