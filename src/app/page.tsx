@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Checks } from "./components/landing/Checks";
 
 export default function Home() {
   return (
@@ -37,19 +38,7 @@ export default function Home() {
         </div>
       </div>
       <div className="px-6 py-2.5">
-        <ul className="flex flex-col gap-4.5">
-          <li className="flex flex-row gap-3.75 items-center">
-            <Image src={"/images/tick.png"} width={16} height={15} alt="Check in under 60 seconds" className="w-4 h-[15px]" />
-            <p className="text-sm font-normal tracking-normal">Check in under <span className="font-bold">60 seconds</span></p></li>
-          <li className="flex flex-row gap-3.75 items-center">
-            <Image src={"/images/tick.png"} width={16} height={15} alt="Free agreement finder" className="w-4 h-[15px]" />
-            <p className="text-sm font-normal tracking-normal"><span className="font-bold">Free</span> agreement finder</p>
-          </li>
-          <li className="flex flex-row gap-3.75 items-center">
-            <Image src={"/images/tick.png"} width={16} height={15} alt="1 Million plus drivers signed up" className="w-4 h-[15px]" />
-            <p className="text-sm font-normal tracking-normal"><span className="font-bold">1 Million+</span> drivers signed up</p>
-          </li>
-        </ul>
+        <Checks />
       </div>
     </main>
   );
