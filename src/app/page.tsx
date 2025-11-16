@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen my-2.5 flex flex-col">
+    <main className="my-2.5 flex flex-col">
       <div className="flex flex-col gap-2.5 border-b border-b-[#00000026] mx-4">
         <div className="flex gap-2.5 flex-col">
           <h1 className="text-[32px] leading-[38px] font-bold text-[#161823] tracking-normal">You could be owed up to £5,318.25* per car finance agreement.</h1>
