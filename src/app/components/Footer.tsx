@@ -47,9 +47,9 @@ export function Footer() {
             <span className="font-semibold">Privacy and Complaints</span>
             <br />
             By submitting a claim, you consent to Courmacs Legal Limited
-            processing your data in accordance with our Privacy Policy. For
+            processing your data in accordance with our <span className="underline">Privacy Policy</span>. For
             concerns, please review our{" "}
-            <span>Complaints Procedure</span>.
+            <span className="underline">Complaints Procedure</span>.
           </p>
 
           <p className={textClass}>
