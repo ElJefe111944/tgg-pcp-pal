@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Checks } from "./components/landing/Checks";
+import { FAQs } from "./components/landing/FAQs";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -9,9 +10,7 @@ export default function Home() {
 
   const [showFaqs, setShowFaqs] = useState<boolean>(false);
 
-  const handleShowFaqs = () => {
-    setShowFaqs(!showFaqs);
-  };
+  const handleShowFaqs = () => setShowFaqs((prev) => !prev);
 
   return (
     <main className="my-2.5 flex flex-col">
@@ -43,7 +42,7 @@ export default function Home() {
               className="w-[75px] h-[20.08px]"
             />
           </div>
-          <div className="my-3.25">
+          <div className="my-3.25 w-[343px]">
             <h2 className="text-2xl font-medium text-center">Average claim value: <span className="font-extrabold">£5,318.25*</span> per vehicle</h2>
           </div>
         </div>
@@ -58,13 +57,7 @@ export default function Home() {
             <button className="h-11 bg-[#D9D9D9] border-black border-[1.5px] text-black rounded-[10px] text-[16px]">View Lenders</button>
           </div>
         </div>
-        {!showFaqs ? (
-          <div className="flex h-11">
-            <button onClick={handleShowFaqs} className="h-11 w-full bg-[#545252] border-black border-[1.5px] text-white rounded-[10px] text-[16px]">See More About PCP</button>
-          </div>
-        ) : (
-          <div className="bg-white">FAQs</div>
-        )}
+          <FAQs showFaqs={showFaqs} handleShowFaqs={handleShowFaqs} />
       </div>
     </main>
   );
