@@ -35,7 +35,7 @@ export function AddressForm(){
         router.push("/personal-details");
      };
 
-     const inputStyles = "h-[50px] bg-[#F1F1F2] p-1.5 text-[16px] border-r-2";
+     const inputStyles = "h-[50px] bg-[#F1F1F2] p-1.5 text-[16px]";
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="w-full flex flex-col gap-2.5">
