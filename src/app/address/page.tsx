@@ -2,27 +2,21 @@
 
 import { useState } from "react"
 import { useForm } from "react-hook-form";
-import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup";
 import Image from "next/image"
 import { Trust } from "../components/landing/Trust"
 import { AddressForm } from "../components/address/AddressForm"
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { setPostcode } from "../store/features/addressSlice";
+import { postcodeSchema, type PostCodeFormValues } from "../validation/postcode";
 
-const postcodeSchema = yup.object({
-  postcode: yup
-    .string()
-    .trim()
-    .matches(
-      /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i,
-      "Please enter a valid UK postcode")
-    .required("Postcode is required")
-});
-
-type PostCodeFormValues = yup.InferType<typeof postcodeSchema>;
 
 export default function Page() {
 
-  const [showAddressForm, setShowAddressForm] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+  const savedPostcode = useAppSelector((state) => state.address.postcode);
+
+  const [showAddressForm, setShowAddressForm] = useState<boolean>(!!savedPostcode);
 
   const {
     register,
@@ -30,10 +24,14 @@ export default function Page() {
     formState: { errors, isValid, isSubmitting }
   } = useForm<PostCodeFormValues>({
     resolver: yupResolver(postcodeSchema),
-    mode: "onChange"
+    mode: "onChange",
+    defaultValues: {
+      postcode: savedPostcode || ""
+    }
   })
 
   const onSubmit = (data: PostCodeFormValues) => {
+    dispatch(setPostcode(data.postcode))
     setShowAddressForm(true);
   };
 
@@ -54,6 +52,11 @@ export default function Page() {
             <div className="flex flex-col gap-2.5">
               <div>
                 <label className="text-[16px] leading-6 text-[#161823]" htmlFor="postcode">Enter your postcode and tap ‘Search’.</label>
+              </div>
+              <div>
+              {errors.postcode && (
+                  <p className="text-red-700">{errors.postcode.message}</p>
+                )}
               </div>
               <div className="flex flex-row gap-3.5 items-center">
                 <input {...register("postcode")} autoCapitalize="postal-code" id="postcode" type="text" className="h-[50px] bg-[#F1F1F2] w-[197px] p-1.5 text-[16px]" placeholder="Postcode" />
