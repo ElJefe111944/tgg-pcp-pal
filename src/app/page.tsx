@@ -16,7 +16,7 @@ export default function Home() {
   const handleShowFaqs = () => setShowFaqs((prev) => !prev);
 
   return (
-    <main className="my-2.5 flex flex-col">
+    <main className="my-5 flex flex-col">
       <div className="flex flex-col gap-2.5 border-b border-b-[#00000026] mx-4">
           <Headline />
         <div>
