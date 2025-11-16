@@ -4,7 +4,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Plus, Minus } from "lucide-react";
+import { MyAgreements } from "./MyAgreements";
 
 interface FaqsTypes {
     showFaqs: boolean,
@@ -38,11 +38,11 @@ export function FAQs({ showFaqs, handleShowFaqs }: FaqsTypes) {
                     <button onClick={handleShowFaqs} className="h-11 w-full bg-[#545252] border-black border-[1.5px] text-white rounded-[10px] text-[16px]">See More About PCP</button>
                 </div>
             ) : (
-                <div className="bg-white p-5">
+                <div className="bg-white p-5 flex flex-col gap-5">
                     <div>
                         <h2 className="text-[24px] font-semibold text-[#161823]">Frequently Asked Questions</h2>
                     </div>
-                    <div>
+                    <div className="border-b border-[#D9D9D9] b-r-[1px]">
                             <Accordion type="multiple" defaultValue={["item-1", "item-2", "item-3"]}>
                                 {faqs.map((item) => (
                                     <AccordionItem key={item.id} value={`item-${item.id}`}>
@@ -53,6 +53,9 @@ export function FAQs({ showFaqs, handleShowFaqs }: FaqsTypes) {
                                     </AccordionItem>
                                 ))}
                             </Accordion>
+                    </div>
+                    <div className="my-2.5">
+                       <MyAgreements />
                     </div>
                 </div>
             )}
