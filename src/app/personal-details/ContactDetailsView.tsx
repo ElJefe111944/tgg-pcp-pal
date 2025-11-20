@@ -47,7 +47,7 @@ export function ContactDetailsView() {
             })
         );
 
-        // router.push("/next-step");
+        router.push("/signature");
     };
 
     return (
