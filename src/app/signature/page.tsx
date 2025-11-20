@@ -4,18 +4,17 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import SignatureCanvas from "react-signature-canvas";
 import { useForm } from "react-hook-form";
-
+import { useRouter } from "next/navigation";
 import { Trust } from "../components/landing/Trust";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
-import { setContactDetails } from "../store/features/contactDetailsSlice";
+import { setSignature } from "../store/features/contactDetailsSlice";
 
 type FormValues = {};
 
 export default function Page() {
+    const router = useRouter();
     const dispatch = useAppDispatch();
-    const contactDetailsState = useAppSelector((state) => state.contactDetails);
     const personalDetailsState = useAppSelector((state) => state.personalDetails)
-
 
     const {
         handleSubmit,
@@ -45,22 +44,13 @@ export default function Page() {
             return;
         }
 
-        // If you want the actual signature image:
         const signatureDataUrl = sigCanvas.current
             .getTrimmedCanvas()
             .toDataURL("image/png");
 
-        // TODO: send `signatureDataUrl` to your API / store it in Redux, etc.
+        dispatch(setSignature(signatureDataUrl));
 
-        // Keep your existing Redux shape intact for now:
-        dispatch(
-            setContactDetails({
-                email: contactDetailsState.email,
-                mobile: contactDetailsState.mobile,
-            })
-        );
-
-        // router.push("/next-step");
+        router.push("/thank-you");
     };
 
     return (
@@ -130,7 +120,7 @@ export default function Page() {
                         <button
                             type="submit"
                             className={`flex flex-row gap-2.5 justify-center items-center h-[50px] ${!hasSignature || isSubmitting ? "bg-[#B8B8BE]" : "bg-[#FF004F]"
-                                } text-white text-[18px] leading-[18.12px] rounded-[2px] font-medium`}
+                                } text-white text-[18px] leading-[18.12px] rounded-[7px] font-medium`}
                             disabled={!hasSignature || isSubmitting}
                         >
                             <Image
