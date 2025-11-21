@@ -56,7 +56,7 @@ export function AddressForm(){
                 <p className="text-red-700" >{errors.county?.message}</p>
             )}
             <p>Please check the details above are correct before continuing.</p>
-            <button type="submit" className={`flex flex-row gap-2.5 justify-center items-center h-[50px] ${!isValid || isSubmitting ? "bg-[#B8B8BE]" : "bg-[#FF004F]"} text-white text-[15px] leading-6`} disabled={!isValid || isSubmitting}><span>Next</span> <Image src={"/images/address/arrow-right.png"} width={7} height={12.44} alt="Next" /></button>
+            <button type="submit" className={`flex flex-row gap-2.5 justify-center items-center rounded-[7px] h-[50px] ${!isValid || isSubmitting ? "bg-[#B8B8BE]" : "bg-[#FF004F]"} text-white text-[15px] leading-6`} disabled={!isValid || isSubmitting}><span>Next</span> <Image src={"/images/address/arrow-right.png"} width={7} height={12.44} alt="Next" /></button>
         </form>
     )
 }
