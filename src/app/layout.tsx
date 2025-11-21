@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={tiktokSans.className}>
         <Header />
-        <main className="w-full max-w-md">
+        <main className="w-full">
           <ReduxProvider>
             {children}
           </ReduxProvider>
