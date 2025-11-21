@@ -54,7 +54,7 @@ export function ContactDetailsView() {
         <main className="my-5 flex flex-col">
             <div className="border-b border-b-[#00000026] mx-4 flex flex-col gap-5">
                 <div className="flex flex-row gap-9 items-start">
-                    <div className="flex flex-row gap-1.5">
+                    <div className="flex flex-row gap-1.5 py-5 border-b border-b-[#00000026]">
                         <div className="flex flex-col gap-1.5 flex-2/3">
                             <h2 className="text-2xl font-semibold text-[#161823]">
                                 Your Contact Details
@@ -139,7 +139,7 @@ export function ContactDetailsView() {
 
                         <button
                             type="submit"
-                            className={`flex-1 flex flex-row gap-2.5 justify-center items-center h-[50px] ${!isValid || isSubmitting ? "bg-[#B8B8BE]" : "bg-[#FF004F]"
+                            className={`flex-1 flex flex-row gap-2.5 rounded-[7px] justify-center items-center h-[50px] ${!isValid || isSubmitting ? "bg-[#B8B8BE]" : "bg-[#FF004F]"
                                 } text-white text-[15px] leading-6`}
                             disabled={!isValid || isSubmitting}
                         >
