@@ -6,7 +6,7 @@ export function Trust(){
         <div>
         <div className="flex my-3.25 flex-row items-center justify-center gap-6.5">
           <Image
-            src={"/images/trustpilot.png"}
+            src={"/images/Trustpilot.png"}
             alt="Rated 4.8 out of 5 on Trustpilot"
             width={93.56}
             height={31.54}
