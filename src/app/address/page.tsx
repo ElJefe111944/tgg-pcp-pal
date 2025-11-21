@@ -38,7 +38,7 @@ export default function Page() {
   return (
     <main className="my-5 flex flex-col">
       <div className="border-b border-b-[#00000026] mx-4 flex flex-col gap-5">
-        <div className="flex flex-row gap-9 items-start">
+        <div className="flex flex-row gap-9 items-start justify-between">
           <div className="flex flex-col gap-1.5">
             <h2 className="text-2xl font-semibold text-[#161823]">Your Current Address</h2>
             <p className="text-[16px] font-normal leading-6 text-[#161823CC]">We need your current address to find your finance agreements</p>
@@ -58,8 +58,8 @@ export default function Page() {
                   <p className="text-red-700">{errors.postcode.message}</p>
                 )}
               </div>
-              <div className="flex flex-row gap-3.5 items-center">
-                <input {...register("postcode")} autoCapitalize="postal-code" id="postcode" type="text" className="h-[50px] bg-[#F1F1F2] w-[197px] p-1.5 text-[16px]" placeholder="Postcode" />
+              <div className="flex flex-row gap-3.5 items-center w-full">
+                <input {...register("postcode")} autoCapitalize="postal-code" id="postcode" type="text" className="h-[50px] bg-[#F1F1F2] w-full p-1.5 text-[16px]" placeholder="Postcode" />
                 <button disabled={!isValid || isSubmitting} className={`w-[132px] h-[35px] rounded-[29px] ${!isValid || isSubmitting ? "bg-[#B8B8BE]" : "bg-[#FF004F]"} text-white text-[15px] leading-6`}>Search</button>
               </div>
             </div>

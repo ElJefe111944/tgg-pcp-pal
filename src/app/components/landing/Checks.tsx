@@ -36,7 +36,7 @@ export function Checks() {
             {benefits.map((item) => (
                 <li
                     key={item.id}
-                    className="flex flex-row items-center gap-[15px]"
+                    className="flex flex-row items-center landscape:justify-center gap-[15px]"
                 >
                     <Image
                         src="/images/tick.png"

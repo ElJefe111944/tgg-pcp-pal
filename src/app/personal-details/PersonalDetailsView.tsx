@@ -128,7 +128,7 @@ export function PersonalDetailsView() {
                     {/* DOB */}
                     <div className="flex flex-col gap-1">
                         <label className="text-[16px] leading-6 text-[#161823CC]">Date of birth</label>
-                        <div className="flex gap-2 justify-between">
+                        <div className="flex gap-2.5 landscape:justify-center justify-between">
                             <input
                                 className={`${inputStyles} w-[100px] text-center`}
                                 type="text"
