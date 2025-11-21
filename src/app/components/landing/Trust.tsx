@@ -20,7 +20,7 @@ export function Trust(){
             className="w-[75px] h-[20.08px]"
           />
         </div>
-        <div className="my-3.25 w-[343px]">
+        <div className="my-3.25 w-full">
           <h2 className="text-2xl font-medium text-center">Average claim value: <span className="font-extrabold">£5,318.25*</span> per vehicle</h2>
         </div>
       </div> 
