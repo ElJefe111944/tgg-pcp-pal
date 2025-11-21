@@ -82,7 +82,7 @@ export function PersonalDetailsView() {
                         <select
                             id="title"
                             {...register("title")}
-                            className={`${inputStyles} w-[88px]`}
+                            className={`h-[50px] bg-[#FFFFFF] border border-[#161823CC] rounded-[2px] p-1.5 text-[16px] w-[88px] text-[#83848A]`}
                         >
                             <option value="">Title</option>
                             <option value="Mr">Mr</option>
@@ -164,7 +164,7 @@ export function PersonalDetailsView() {
                     </div>
                     <button
                         type="submit"
-                        className={`flex flex-row gap-2.5 justify-center items-center h-[50px] ${!isValid || isSubmitting ? "bg-[#B8B8BE]" : "bg-[#FF004F]"
+                        className={`flex flex-row gap-2.5 justify-center rounded-[7px] items-center h-[50px] ${!isValid || isSubmitting ? "bg-[#B8B8BE]" : "bg-[#FF004F]"
                             } text-white text-[15px] leading-6`}
                         disabled={!isValid || isSubmitting}
                     >
