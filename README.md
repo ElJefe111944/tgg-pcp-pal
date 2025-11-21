@@ -7,23 +7,22 @@ The app includes a full multi-step user flow consisting of a landing page, addre
 ## Screenshots
 
 #### Landing Page
-![Landing Page](public/images/read-me/landing.pdf)  
-![Landing Page](public/images/read-me/landing-2.pdf)  
+![Landing Page](public/images/read-me/landing.png)  
+![Landing Page](public/images/read-me/landing2.png)  
 
 #### Address
-![Address Page](public/images/read-me/address.pdf)  
-![Address Page](public/images/read-me/address-2.pdf)  
+![Address Page](public/images/read-me/address.png)  
 
 #### Personal Details
-![Personal Details Page](public/images/read-me/personal-details.pdf)  
-![Contact Details Page](public/images/read-me/address.pdf)  
+![Personal Details Page](public/images/read-me/personal-details.png)  
+![Contact Details Page](public/images/read-me/address.png)  
 
 #### Signature 
-![Signature Page](public/images/read-me/signature.pdf)  
+![Signature Page](public/images/read-me/signature.png)  
 
 #### Thank You
-![Thank you Page](public/images/read-me/thanks-you.pdf)  
-![Thank you Page](public/images/read-me/thank-you-1.pdf)  
+![Thank you Page](public/images/read-me/thank-you.png)  
+![Thank you Page](public/images/read-me/thnak-you-2.png)  
 
 *(Update the paths above to match where the exported images are stored in your project, typically under `public/screenshots/`.)*
 
